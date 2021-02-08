@@ -3,8 +3,8 @@ using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 #define _GLIBCXX_DEBUG
 int main() {
-    cin >> n >> x;
     int n, x;
+    cin >> n >> x;
     vector<int> vec(n);
     rep(i, n) cin >> vec.at(i);
     
