@@ -6,11 +6,10 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
-    
-    int sum = 700;
-    rep(i, 3){
-        if(s.at(i) == 'o') sum += 100;
+    int count ;
+    for(int i = 0; i < 3; i++){
+        if(s[i] == 'o') count++;
     }
-    
-    cout << sum << endl;
+
+    cout << 700 + count*100 << endl;
 }
