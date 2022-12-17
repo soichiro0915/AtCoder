@@ -1,7 +1,7 @@
 "use strict";
 function main(input) {
-  console.log(input.split(" "));
-  const [num, lines] = input.split("\n");
-  let numbers = lines.split(" ").map(Number);
+  const [K] = input.split("\n");
+  const alpahbet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  console.log(alpahbet.slice(0, K));
 }
 main(require("fs").readFileSync("/dev/stdin", "utf8"));

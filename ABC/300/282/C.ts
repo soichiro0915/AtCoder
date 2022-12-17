@@ -1,8 +1,20 @@
-'use strict'
+"use strict";
 function main(input) {
-  console.log(input.split(' '))
-  const [num, lines] = input.split('\n')
-  let numbers = lines.split(' ').map(Number)
+  const [n, s] = input.split("\n");
+  let count = 0;
+  const ans = s.split("").map((element) => {
+    if (element === '"') {
+      count++;
+      return element;
+    } else {
+      if (count % 2 === 0 && element === ",") {
+        return ".";
+      } else {
+        return element;
+      }
+    }
+  });
 
+  console.log(ans.join(""));
 }
-main(require('fs').readFileSync('/dev/stdin', 'utf8')); 
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
